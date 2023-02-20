@@ -1,0 +1,293 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+
+
+
+.maincontainer
+{
+    
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+        
+    
+    
+/*     grid-template-rows: 20px 40px 250px 60px 90px 170px 150px;
+ */  
+        grid-template-rows: 160px 500px 100px 100px;
+ 
+/*     grid-template-columns: 390px 390px 390px 390px;
+ */    
+        grid-template-columns: 50% 50% ;
+    background: white;
+
+    grid-template-areas: 
+    "header1 header2"
+    "main1 main1"
+    "footer1 footer1"
+    "footer2 footer2";
+}
+
+.box
+{
+    background-color: rgb(238, 238, 232);
+    
+}
+
+.header1
+{
+    grid-area: header1;
+    display: flex;
+    border-top: 5px solid rgba(21,88,164,0.5);
+    color: rgba(21,88,164,0.5);
+    flex-wrap: wrap;
+    border-top: 5px solid linear-gradient;
+    overflow: hidden;
+}
+
+.header1 .portrait
+{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-image: url(/images/Dirk_Porträt\ Lebenslauf.jpg);
+    background-size: cover;
+    border: 1px black solid;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    box-shadow: 5px 20px 28px 5px #777373;
+    
+}
+
+.header1 p
+{
+    font-size: 2rem;
+    padding-top: 20px;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+.header2
+{
+    grid-area: header2;
+    display: flex;
+    border-top: 5px solid rgba(21,88,164,0.5);
+    flex-wrap: wrap;
+    
+}
+
+
+.header2 ul li
+{
+    list-style: none;
+    display: inline; 
+    position: relative;
+    top: 20px;
+    margin-right: 20px;
+    
+}
+
+.header2 ul li a
+{
+    text-decoration: none;
+    font-size: 1.7rem;
+    color: rgba(21,88,164,0.5);
+}
+
+.header2 ul li a:hover
+{
+    color: blue;
+}
+
+.main1
+{
+    grid-area: main1;
+    border-top: 5px solid rgba(21,88,164,0.5);
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    align-items: center;
+}
+
+.main1 h3,h4
+{
+    padding: 10px;
+}
+
+#slider
+{
+    overflow: hidden;
+}
+
+#slider figure
+{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 35s slider infinite;
+    transition: all 4s;
+}
+
+#slider figure img
+{
+    width: 20%;
+    float: left;
+}
+
+@keyframes slider
+{
+    0% {
+        left:0;
+    }
+    15%{
+        left: -100%;
+    }
+    20%{
+        left: -100%;
+    }
+    35%{
+        left: -200%;
+    }
+    40%{
+        left: -200%;
+    }
+    55%{
+        left: -300%;
+    }
+    60%{
+        left: -300%;
+    }
+    75%{
+        left: -400%;
+    }
+    80%{
+        left: -400%;
+    }
+    95%{
+        left: 500%;
+    }
+    100%{
+        left: 500%;
+    }
+}
+
+
+.footer1
+{
+    grid-area: footer1;
+    font-size: 2rem;
+    color: rgba(21,88,164,0.5);
+    text-align: center;
+    background-color: rgb(197, 193, 193);
+}
+
+
+
+.footer1 ul 
+{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+.footer1 ul li
+{
+    margin:5px 40px 0px 40px;
+}
+
+.footer1 ul li a 
+{
+    color: rgba(21,88,164,0.5);
+}
+
+.footer1 ul li a:hover
+{
+    color: blue;
+} 
+
+
+
+.footer2
+{
+    grid-area: footer2;
+    
+    
+}
+
+.footer2 ul
+{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer2 ul li 
+{
+    font-size: 1.2rem;
+    margin: 10px;
+    
+}
+
+.footer2 ul li a
+{
+    color: rgba(21,88,164,0.5);
+    text-decoration: none;
+}
+
+.footer2 ul li a:hover
+{
+    color: blue;
+}
+
+
+
+
+
+
+
+@media (min-width: 320px) and (max-width: 480px)
+
+{
+    
+    .maincontainer
+{
+    
+    display: grid;
+    width: 70%;
+    margin: 0 auto;
+    
+    
+    
+/*     grid-template-rows: 20px 40px 250px 60px 90px 170px 150px;
+ */  
+        grid-template-rows: 170px 170px 450px 450px 100px 100px;
+ 
+/*     grid-template-columns: 390px 390px 390px 390px;
+ */    
+        grid-template-columns: 100% ;
+    background: white;
+
+    grid-template-areas: 
+    "header1" 
+    "header2"
+    "main1" 
+    "main2"
+    "footer1" 
+    "footer1"
+    "footer2" 
+    "footer2";
+}
+
+}
