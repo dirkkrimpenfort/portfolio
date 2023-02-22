@@ -6,8 +6,14 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
+:root
+{
+    --size: 200px;
+    --size-half: calc(0.5 * var(--size));
+    --size-half-negative: calc(-0.5 * var(--size));
 
 
+}
 
 .maincontainer
 {
@@ -18,13 +24,9 @@
         
     
     
-/*     grid-template-rows: 20px 40px 250px 60px 90px 170px 150px;
- */  
-        grid-template-rows: 160px 450px 100px 100px;
+    grid-template-rows: 160px 450px 100px 100px;
  
-/*     grid-template-columns: 390px 390px 390px 390px;
- */    
-        grid-template-columns: 50% 50% ;
+    grid-template-columns: 50% 50% ;
     background: white;
 
     grid-template-areas: 
@@ -117,14 +119,43 @@
     flex-direction: column;
     text-align: justify;
     align-items: center;
-    overflow: hidden;
 }
 
 .main1 h3,h4
 {
     padding: 10px;
+    
 }
 
+.main1 .textbox h3
+{
+    text-align: center;
+    
+}
+
+.main2
+{
+    grid-area: main2;
+    display: flex;
+    text-align: justify;
+    align-items: center;
+}
+
+.main2 img
+{
+    padding: 10px;
+    width: 33%;
+    
+}
+
+.main22
+{
+    grid-area: main2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 110px;
+}
 
 
 .footer1
@@ -206,7 +237,12 @@
 
 {
  
-    
+    :root
+    {
+        --size: 120px;
+        --size-half: calc(0.5 * var(--size));
+        --size-half-negative: calc(-0.5 * var(--size));
+    }
 
     .header1 p
     {
@@ -234,7 +270,12 @@
 @media (min-width: 20px) and (max-width: 319px)
 
 {
-    
+    :root
+    {
+        --size: 60px;
+        --size-half: calc(0.5 * var(--size));
+        --size-half-negative: calc(-0.5 * var(--size));
+    }
 
     .header1 p
     {

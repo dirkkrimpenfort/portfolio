@@ -1,0 +1,109 @@
+
+#stage
+{
+    
+    
+    min-width: 50vw;
+    min-height: 50vh;
+    perspective: 1500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform-style: preserve-3d;
+}
+
+#cube
+{
+    
+    transform-style: inherit;
+    position: relative;
+    animation: cube-rotation 15s linear infinite;
+}
+
+@keyframes cube-rotation
+{
+    from {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    to {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    
+}
+}
+
+.face
+{
+    position: absolute;
+    width: var(--size);
+    height: var(--size);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.9;
+    background-color: gray;
+    color: gray;
+    font-size: 4rem;
+    transition: all 200ms ease;
+}
+
+.facecontent
+{
+    width: 90%;
+    height: 90%;
+    background-color: var(--color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+
+}
+
+.face:hover
+{
+    background-color: white;
+    box-shadow: 0px 0px 30px darkblue;
+    opacity: 1;
+    color: black;
+}
+
+
+.face.front
+{
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half));
+}
+
+
+.face.back
+{
+    transform: translateX(-50%) translateY(-50%)
+    translateZ(var(--size-half-negative)) scaleX(-1);
+}
+
+.face.top
+{
+   transform: translateX(-50%) translateY(calc(-50% + var(--size-half-negative))) 
+   rotateX(90deg);
+
+}
+
+.face.bottom
+{
+    transform: translateX(-50%) translateY(calc(-50% + var(--size-half))) 
+    rotateX(90deg);
+}
+
+.face.left
+{
+    transform: translateX(calc(-50% + var(--size-half-negative))) 
+    translateY(-50%) rotateY(-90deg);
+}
+
+
+.face.right
+{
+    transform: translateX(calc(-50% + var(--size-half))) 
+    translateY(-50%) rotateY(90deg);
+}
+
+
